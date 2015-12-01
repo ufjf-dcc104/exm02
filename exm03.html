@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Primeiro Exemplo</title>
+	</head>
+	<body>
+		<h1>Primeiro Exemplo</h1>
+		<canvas width="400" height="300">
+			Seu navegador nao tem suporte ao canvas!
+		</canvas>
+
+		<script>
+			var tela = document.getElementsByTagName("canvas")[0];
+			var ctx = tela.getContext("2d");
+			/*
+			ctx.fillStyle = "red";
+			ctx.fillRect(10,10, 50,50);	
+			ctx.strokeStyle = "darkred";
+			ctx.lineWidth = 3;
+			ctx.strokeRect(10,10, 50,50);	
+			ctx.clearRect(25,25, 50,50);
+			ctx.beginPath();
+			ctx.arc(300, 50, 30, 1/2*Math.PI, 1*Math.PI, false);
+			ctx.closePath();
+			ctx.fillStyle = "rgb(235, 130, 130)";
+			ctx.fill();
+			ctx.strokeStyle = "rgb( 155, 50, 50)";
+			ctx.stroke();
+	*/
+
+			ctx.beginPath();
+			ctx.lineWidth = 3;
+			
+			ctx.moveTo(100,100);
+			ctx.setLineDash([5,5]);
+			ctx.arcTo(150,100, 150,150, 50);
+			ctx.arcTo(150,200, 200,200, 50);
+			ctx.closePath();
+			ctx.fillStyle = "rgb(250, 150, 150)";
+			//ctx.fill();
+			ctx.stroke();
+	
+		</script>
+	</body>
+</html> 
